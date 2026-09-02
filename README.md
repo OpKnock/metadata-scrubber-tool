@@ -1,52 +1,38 @@
-```ruby
-███╗   ███╗███████╗████████╗
-████╗ ████║██╔════╝╚══██╔══╝
-██╔████╔██║███████╗   ██║
-██║╚██╔╝██║╚════██║   ██║
-██║ ╚═╝ ██║███████║   ██║
-╚═╝     ╚═╝╚══════╝   ╚═╝
-```
+# Metadata Scrubber Tool
 
+Educational metadata removal and sanitization tool: strips EXIF data, GPS coordinates, author information, and proprietary metadata from images, PDFs, and documents. Privacy-focused tool for secure document sharing.
 
-## What It Does
+## Educational Purpose
 
-- Strip metadata from JPEG, PNG, PDF, Word, Excel, and PowerPoint files
-- Concurrent processing with ThreadPoolExecutor handles 1000+ files efficiently
-- Dry-run mode previews what would be removed before making changes
-- Verification reports show before/after comparison of metadata fields
-- Smart format detection uses file signatures, not extensions
-- Removes GPS coordinates, author info, timestamps, camera data, and software traces
+**Important:** This tool is intended solely for educational and authorized privacy research purposes. Metadata removal is a fundamental skill in understanding digital privacy and information leakage. This tool should only be used on files you own or have explicit written permission to sanitize.
 
-## Quick Start
+### Authorized Use Only
 
-```bash
-uv tool install metadata-scrubber
-mst scrub photo.jpg
-```
+- Only sanitize metadata on files you own or have have explicit permission to process
+- Obtain explicit written permission before processing any file environment
+- Report any discovered metadata or privacy findings to the appropriate file owners
+- Never process files you do not have explicit authorization for
 
-> [!TIP]
-> This project uses [`just`](https://github.com/casey/just) as a command runner. Type `just` to see all available commands.
->
-> Install: `curl -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin`
+### Educational Value
 
-## Commands
+Understanding metadata removal helps privacy professionals:
+- Identify and classify digital metadata and information leakage
+- Design proper sanitization and redaction workflows
+- Implement effective privacy protection for document sharing
+- Build more secure data handling architectures
 
-| Command | Description |
-|---------|-------------|
-| `mst read <file>` | Inspect metadata fields present in a file |
-| `mst scrub <file>` | Remove all metadata from a file |
-| `mst verify <file>` | Confirm metadata was successfully removed |
+### Legal Compliance
 
-## Learn
+- Unauthorized metadata processing may violate Computer Fraud and Abuse Act (CFAA)
+- Data protection regulations and privacy laws
+- Always obtain explicit written permission before processing any file environment
 
-This project includes step-by-step learning materials covering security theory, architecture, and implementation.
+### Responsible Use
 
-| Module | Topic |
-|--------|-------|
-| [00 - Overview](learn/00-OVERVIEW.md) | Prerequisites and quick start |
-| [01 - Concepts](learn/01-CONCEPTS.md) | Security theory and real-world breaches |
-| [02 - Architecture](learn/02-ARCHITECTURE.md) | System design and data flow |
-| [03 - Implementation](learn/03-IMPLEMENTATION.md) | Code walkthrough |
-| [04 - Challenges](learn/04-CHALLENGES.md) | Extension ideas and exercises |
+- This project is provided for educational purposes only
+- Results should be verified with proper security tools for real-world use
+- Never use discovered techniques against files you do not have explicit authorization to process
 
+## License
 
+MIT - This project is free software: you can redistribute it and/or modify it under the terms of the MIT License. See the LICENSE file for full terms and conditions.
